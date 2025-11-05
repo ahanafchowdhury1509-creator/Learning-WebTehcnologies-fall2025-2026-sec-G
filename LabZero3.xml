@@ -1,3 +1,23 @@
 <Employee_Info>
-    <
+    <employee id="1">
+                <id>1</id>                                                                
+                <name>John Doe</name>                                                                
+                <adress>H# 38,R#2,Banani,Dhaka</adress>                                                                
+                <department>Sales</department>                                                                
+                <salary>$20000</salary>                                                                
+    </employee>
+    <employee id="2">
+                <id>2</id>                                                                
+                <name>Marks ZukerBerg</name>                                                                
+                <adress>Flat# A/1,H# 20, R#18,Mirpur,Dhaka </adress>                                                                
+                <department>Accounts</department>                                                                
+                <salary>$12000</salary>    
+    </employee>
+    <employee id="3"> 
+                <id>3</id>                                                                
+                <name>Ala Voski</name>                                                                
+                <adress>h# 38,R#3,Motijheel</adress>                                                                
+                <department>Human Resources</department>                                                                
+                <salary>$30000</salary>    
+     </employee>
 </Employee_Info>
