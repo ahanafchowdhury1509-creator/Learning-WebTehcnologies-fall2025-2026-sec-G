@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<body>  
+    <table>
+    <tr>
+        <td><p>Name</p></td></tr>
+       <tr> <td><input type="text" id="UserName"></td></tr>
+       <tr>
+        <td>
+            <p id="MSG"></p>
+        </td>
+       </tr>
+       <tr><td> <input type="submit" onclick="User()" onblur="User()"></td></tr>
+    </table>
+</body>
+<script>
+    function UserValid(name){
+        for(let i=0;i<name.length;i++){
+             if(((name.charCodeAt(i)>=65 && name.charCodeAt(i)<=90) || (name.charCodeAt(i)>=97 && name.charCodeAt(i)<=122) )||(name.charAt(i)==='.')||(name.charAt(i)==='-')||(name.charAt(i)===' ')){
+                  continue;}
+             else{
+                return false;
+             }}
+        return true;
+    }
+    function User(){
+        let UserName=document.getElementById('UserName').value;
+        let MSG=document.getElementById('MSG');
+        
+        if(UserName =="" ){
+               MSG.innerHTML="Type a user name";
+               MSG.style.color="red";
+               return;
+        }
+        
+        if(UserName.split(" ").length<2 ){
+          
+            MSG.innerHTML="Not Enough Input";
+               MSG.style.color="red";
+               return;
+        }
+        if(!(UserValid(UserName))){
+            MSG.innerHTML="Invalid Character"
+            MSG.style.color=red;
+            return;
+        }
+        if(!((UserName.charCodeAt(0)>=65 && UserName.charCodeAt(0)<=90) && (UserName.charCodeAt(0)>=97 || UserName.charCodeAt(0)<=122))){
+                  MSG.innerHTML="Start With Character";
+                  MSG.style.color=red;
+                return;}
+        MSG.innerHTML=""
+
+    }
+</script>
+
+
+</html>
