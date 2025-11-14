@@ -1,0 +1,40 @@
+<html>
+ <body>
+    <table>
+        <tr><td><p>Email</p></td></tr>
+        <tr><td><input type="text" id="Email"></td></tr>
+        <tr><td><p id="MSG"></p></td></tr>
+        <tr><td><input type="submit" onclick="ValidEmail()"></td></tr>
+    </table>
+</body>
+<script>
+      function ValidEmail(){
+              Email=document.getElementById('Email').value;
+              MSG=document.getElementById('MSG');
+              if(Email==""){
+                 MSG.innerHTML="Type a user name";
+                 MSG.style.color="red";
+                 return;
+              }
+            
+              else{
+               if(Email.includes("@gmail.com")){
+                    MSG.innerHTML="";
+                    return;   
+            }
+              else {
+               console.log(Email.match("@gmail.com"))
+                     MSG.innerHTML="Not an email"
+                     MSG.style.color="red";
+                     return;}
+              
+              }
+      }
+</script>
+
+
+
+
+
+
+</html>
