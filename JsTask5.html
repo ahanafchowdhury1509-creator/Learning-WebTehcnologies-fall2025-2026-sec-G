@@ -1,0 +1,48 @@
+<html>
+<body>
+    <table>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Degree</legend>
+                    <input type="checkbox" id="SSC" name="degree"  value="SSC" >
+                    <label >SSC</label>
+                    <input type="checkbox" id="HSC" name="degree"  value="HSC" >
+                    <label >HSC</label>
+                    <input type="checkbox"  id="BSC" name="degree"  value="BSC" >
+                    <label >BSC</label>
+                    
+                </fieldset>
+            </td>
+        </tr>
+        <tr><td><p id="MSG"></p></td></tr>
+        <tr>
+            <td><input type="submit" onclick="Valid()"></td>
+        </tr>
+        
+    </table>
+</body>
+<script>
+  
+    function Valid(){
+    let SSC=document.getElementById('SSC').checked;
+    let HSC=document.getElementById('HSC').checked;
+    let BSC=document.getElementById('BSC').checked;
+    let MSG=document.getElementById('MSG')
+    if( !SSC && !HSC && !BSC){
+              MSG.innerHTML="Must Be One Value Selected";
+              MSG.style.color="red";
+              return;
+    }
+    else{
+        MSG.innerHTML=""
+        return;
+    }
+    }
+</script>
+
+
+
+
+
+</html>
