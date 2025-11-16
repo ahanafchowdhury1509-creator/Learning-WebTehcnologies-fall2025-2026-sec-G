@@ -1,0 +1,76 @@
+<html>
+
+<body>
+<fieldset>
+    <legend>Date OF Birthday</legend>
+    <table>
+         <tr>
+            <td align="center">dd</td>
+            <td></td>
+            <td align="center">mm</td>
+            <td></td>
+            <td align="center">yy</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="D"></td>
+            <td>/</td>
+            <td><input type="text" id="M"></td>
+            <td>/</td>
+            <td><input type="text" id="Y"></td>
+        </tr>
+        <tr><td><p id="MSG"></p></td></tr>
+        <tr>
+            <td colspan="5"><hr id="line"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" onclick="Check()"></td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+<script>
+    function Check(){
+        date=document.getElementById('D').value
+        Month=document.getElementById('M').value
+        Year=document.getElementById('Y').value
+        MSG=document.getElementById('MSG')
+        if(date=="" || Month=="" || Year==""){
+                MSG.innerHTML="Input field is empty";
+                MSG.style.color="red";
+                return;
+        }
+        else{
+           date = parseInt(date)
+           Month = parseInt(Month)
+           Year = parseInt(Year)
+
+           if(date>="1" && date<="31"){
+               if(Month>="1" && Month<="12"){
+                if(Year>="0" && Year<="2025"){
+                    MSG.innerHTML=""
+                    return
+                }
+                else{
+                    MSG.innerHTML="Input Year Properly"
+                    MSG.style.color="red";
+                    return
+                }
+               }
+               else{
+                MSG.innerHTML="Input Month Properly"
+                MSG.style.color="red";
+                return
+               }
+           }
+           else{
+            MSG.innerHTML="Input Date Properly"
+            MSG.style.color="red";
+                return
+           }
+        }
+
+}
+</script>
+
+
+</html>
