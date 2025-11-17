@@ -6,6 +6,7 @@
         display.disabled=true;
         display.style.display="block";
         display.style.width="210px"
+        display.style.color="red";
         document.body.appendChild(display);
         //ADD Text To Display
         let First="";
@@ -26,14 +27,28 @@
                  b=parseFloat(Second);
                  return a+b;
         }
-        const Plus=document.createElement("button")
-        Plus.innerHTML="+";
-        Plus.onclick=()=>{
+        const plus=document.createElement("button")
+        plus.innerHTML="+";
+        plus.onclick=()=>{
+             Opt="+"
              addDis("+");
              Plus(a,b)
         }
-        document.body.appendChild(Plus)
-        
+        document.body.appendChild(plus)
+        //Minus
+        function Minus(a,b){
+                 a=parseFloat(First);
+                 b=parseFloat(Second);
+                 return a-b;
+        }
+        const minus=document.createElement("button")
+        minus.innerHTML="-";
+        minus.onclick=()=>{
+            Opt="-"
+             addDis("-");
+             Minus(a,b)
+        }
+        document.body.appendChild(minus)
     </script>
 </body>
 
