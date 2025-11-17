@@ -7,6 +7,7 @@
         display.style.display="block";
         display.style.width="210px"
         display.style.color="red";
+        display.style.fontsize="24px"
         document.body.appendChild(display);
         //ADD Text To Display
         let First="";
@@ -49,6 +50,21 @@
              Minus(a,b)
         }
         document.body.appendChild(minus)
+        //Division
+                
+        function Division(a,b){
+                 a=parseFloat(First);
+                 b=parseFloat(Second);
+                 return a/b;
+        }
+        const division=document.createElement("button")
+        division.innerHTML="/";
+        division.onclick=()=>{
+             Opt="/"
+             addDis("/");
+             Division(a,b)
+        }
+        document.body.appendChild(division)
     </script>
 </body>
 
