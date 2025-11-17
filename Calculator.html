@@ -94,6 +94,21 @@
              Clear();
         }
         document.body.appendChild(clear)
+        //Equals To
+        function EqualsTo(){
+            display.value="";
+            First="";
+            Second="";
+            Opt="";
+        }
+        const eq=document.createElement("button")
+        eq.innerHTML="=";
+        eq.onclick=()=>{
+            Opt="=";
+            addDis("=");
+             EqualsTo();
+        }
+        document.body.appendChild(eq)
     </script>
 </body>
 
