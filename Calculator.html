@@ -80,6 +80,20 @@
              mult(a,b)
         }
         document.body.appendChild(Mult)
+        //CLear
+                
+        function Clear(){
+                 display.value="";
+                 First="";
+                 Second="";
+                 Opt="";
+        }
+        const clear=document.createElement("button")
+        clear.innerHTML="C";
+        clear.onclick=()=>{
+             Clear();
+        }
+        document.body.appendChild(clear)
     </script>
 </body>
 
