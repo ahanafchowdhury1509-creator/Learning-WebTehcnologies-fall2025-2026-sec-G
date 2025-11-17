@@ -5,9 +5,9 @@
         display.type="text";
         display.disabled=true;
         display.style.display="block";
-        display.style.width="210px"
+        display.style.width="110px"
         display.style.color="red";
-        display.style.fontsize="24px"
+        display.style.fontSize="24px"
         document.body.appendChild(display);
         //ADD Text To Display
         let First="";
@@ -23,61 +23,61 @@
             }
         }
         //Plus
-        function Plus(a,b){
-                 a=parseFloat(First);
-                 b=parseFloat(Second);
-                 return a+b;
+        function Plus(){
+                 
+                 return parseFloat(First)+parseFloat(Second);
         }
         const plus=document.createElement("button")
         plus.innerHTML="+";
         plus.onclick=()=>{
-             Opt="+"
-             addDis("+");
-             Plus(a,b)
+            if (First === "") return;
+            Opt ="+";
+            display.value +="+";
+             
         }
         document.body.appendChild(plus)
         //Minus
-        function Minus(a,b){
-                 a=parseFloat(First);
-                 b=parseFloat(Second);
-                 return a-b;
+        function Minus(){
+                 
+                 return parseFloat(First)-parseFloat(Second);
         }
         const minus=document.createElement("button")
         minus.innerHTML="-";
         minus.onclick=()=>{
-            Opt="-"
-             addDis("-");
-             Minus(a,b)
+            if (First === "") return; 
+            Opt = "-";
+            display.value += "-";
+             
         }
         document.body.appendChild(minus)
         //Division
                 
-        function Division(a,b){
-                 a=parseFloat(First);
-                 b=parseFloat(Second);
-                 return a/b;
+        function Division(){
+                
+                 return parseFloat(First)/parseFloat(Second);
         }
         const division=document.createElement("button")
         division.innerHTML="/";
         division.onclick=()=>{
-             Opt="/"
-             addDis("/");
-             Division(a,b)
+             if (First === "") return; 
+            Opt = "/";
+            display.value += "/";
+             
         }
         document.body.appendChild(division)
         //Multiplication
                 
-        function mult(a,b){
-                 a=parseFloat(First);
-                 b=parseFloat(Second);
-                 return a*b;
+        function mult(){
+                
+                 return parseFloat(Second)*parseFloat(First);
         }
         const Mult=document.createElement("button")
         Mult.innerHTML="*";
         Mult.onclick=()=>{
-             Opt="*"
-             addDis("*");
-             mult(a,b)
+             if (First === "") return; 
+            Opt ="*";
+            display.value +="*";
+             
         }
         document.body.appendChild(Mult)
         //CLear
@@ -94,13 +94,14 @@
              Clear();
         }
         document.body.appendChild(clear)
+        document.body.appendChild(document.createElement("br"))
         //Equals To
         function EqualsTo(){
         let result;
-        if (Opt === "+") result = Plus(a, b);
-        if (Opt === "-") result = Minus(a, b);
-        if (Opt === "*") result = mult(a, b);
-        if (Opt === "/") result = Division(a, b);
+        if (Opt === "+") result = Plus();
+        if (Opt === "-") result = Minus();
+        if (Opt === "*") result = mult();
+        if (Opt === "/") result = Division();
         display.value = result;
         First = result.toString();
         Second = "";
@@ -109,12 +110,13 @@
         const eq=document.createElement("button")
         eq.innerHTML="=";
         eq.onclick=()=>{
-            Opt="=";
+            
             addDis("=");
             EqualsTo();
              
         }
         document.body.appendChild(eq)
+        
         //Number Buttons
         // 0
         const zero = document.createElement("button");
@@ -139,6 +141,7 @@
         THree.innerHTML = "3";
         THree.onclick = () => { addDis("3"); };
         document.body.appendChild(THree);
+        document.body.appendChild(document.createElement("br"))
 
         // 4
         const Four = document.createElement("button");
@@ -151,7 +154,7 @@
         Five.innerHTML = "5";
         Five.onclick = () => { addDis("5"); };
         document.body.appendChild(Five);
-
+        document.body.appendChild(document.createElement("br"))
         // 6
         const Six = document.createElement("button");
         Six.innerHTML = "6";
@@ -175,7 +178,8 @@
         Nine.innerHTML = "9";
         Nine.onclick = () => { addDis("9"); };
         document.body.appendChild(Nine);
-
+        document.body.appendChild(document.createElement("br"))
+        
     </script>
 </body>
 
