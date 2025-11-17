@@ -96,17 +96,23 @@
         document.body.appendChild(clear)
         //Equals To
         function EqualsTo(){
-            display.value="";
-            First="";
-            Second="";
-            Opt="";
+        let result;
+        if (Opt === "+") result = Plus(a, b);
+        if (Opt === "-") result = Minus(a, b);
+        if (Opt === "*") result = mult(a, b);
+        if (Opt === "/") result = Division(a, b);
+        display.value = result;
+        First = result.toString();
+        Second = "";
+        Opt = "";
         }
         const eq=document.createElement("button")
         eq.innerHTML="=";
         eq.onclick=()=>{
             Opt="=";
             addDis("=");
-             EqualsTo();
+            EqualsTo();
+             
         }
         document.body.appendChild(eq)
     </script>
