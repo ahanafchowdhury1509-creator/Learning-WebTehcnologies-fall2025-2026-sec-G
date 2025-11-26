@@ -1,0 +1,51 @@
+<html>
+<body id="One">
+    
+</body>
+<script>
+    //Table and their rows and colums
+    const Tab=document.createElement("table");
+    Tab.border="1";
+    Tab.width="50%";
+    Tab.cellSpacing="0";
+    const Tr=document.createElement("tr");
+    Tab.appendChild(Tr);
+    const Tr1=document.createElement("tr");
+    Tab.appendChild(Tr1);
+    const Td=document.createElement("td");
+    Tr.appendChild(Td);
+    const Td_Add=document.createElement("td");
+    Tr1.appendChild(Td_Add);
+    const B=document.getElementById("One");
+    B.appendChild(Tab);
+    
+    //Input Fields
+    const Lab_In=document.createElement("label");
+    Lab_In.innerText="Input: ";
+    Td.appendChild(Lab_In)
+    const Add_field=document.createElement("input");
+    Add_field.type="text";
+    Td.appendChild(Add_field);
+    //Buttons
+    const ADDBtn=document.createElement("input")
+    ADDBtn.type="button";
+    ADDBtn.value="ADD";
+    ADDBtn.style.margin="0 0 0 42px";
+    Td_Add.appendChild(ADDBtn)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
