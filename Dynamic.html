@@ -21,6 +21,8 @@
     const Td_V=document.createElement("td")
     Tr2.appendChild(Td_V);
     Tr2.hidden=true;
+    
+    
     Tab.appendChild(Tr2)
     const B=document.getElementById("One");
     B.appendChild(Tab);
@@ -33,10 +35,13 @@
 
     const Add_field=document.createElement("input");
     Add_field.type="text";
+    Add_field.id="A1"
     Td.appendChild(Add_field);
+    
     //Dropdown
     const dd=document.createElement("select")
-    dd.style.margin="0 0 0 10"
+    dd.style.margin="0 0 0 10";
+    dd.id="D1";
     const o1=document.createElement("option")
     o1.value="UserName"
     o1.innerHTML="Name"
@@ -50,13 +55,38 @@
     dd.appendChild(o2)
     dd.appendChild(o3)
     Td.appendChild(dd)
+    //Part With Save option poping up
+    const lab=document.createElement("label")
+    
+    Td_V.appendChild(lab)
+
     //Buttons
     const ADDBtn=document.createElement("input")
     ADDBtn.type="button";
     ADDBtn.value="ADD";
     ADDBtn.style.margin="0 0 0 42px";
+    const Stn=document.createElement("input")
+    Stn.type="button";
+    Stn.value="Save";
+    
     ADDBtn.addEventListener('click',()=>{
+                    
+                    if(Add_field.value===""){
+                        Add_field.placeholder="You Must Fill it"
+                    }
+                    else{
+
                     Tr2.hidden=false;
+                    lab.innerText=document.getElementById("D1").value+": "
+                    if(D1.value=="UserName"){
+                        const U_Name=document.createElement('input')
+                        U_Name.type="text"
+                        U_Name.placeholder="Enter Name"
+                        U_Name.value=document.getElementById("A1").value
+                        Td_V.appendChild(U_Name)
+                        Td_V.appendChild(Stn)
+                    }    
+                }
     })
 
     
