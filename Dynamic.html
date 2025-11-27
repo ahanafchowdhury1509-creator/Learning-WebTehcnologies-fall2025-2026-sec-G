@@ -43,7 +43,7 @@
     dd.style.margin="0 0 0 10";
     dd.id="D1";
     const o1=document.createElement("option")
-    o1.value="UserName"
+    o1.value="Name"
     o1.innerHTML="Name"
     const o2=document.createElement("option")
     o2.value="D/O/B"
@@ -56,41 +56,75 @@
     dd.appendChild(o3)
     Td.appendChild(dd)
     //Part With Save option poping up
-    const lab=document.createElement("label")
     
-    Td_V.appendChild(lab)
 
     //Buttons
     const ADDBtn=document.createElement("input")
     ADDBtn.type="button";
     ADDBtn.value="ADD";
     ADDBtn.style.margin="0 0 0 42px";
-    const Stn=document.createElement("input")
-    Stn.type="button";
-    Stn.value="Save";
-    
+    Td_Add.appendChild(ADDBtn)
     ADDBtn.addEventListener('click',()=>{
                     
                     if(Add_field.value===""){
                         Add_field.placeholder="You Must Fill it"
                     }
-                    else{
+                  
+                    else if(Tr2.hidden==true){
 
                     Tr2.hidden=false;
-                    lab.innerText=document.getElementById("D1").value+": "
-                    if(D1.value=="UserName"){
+                    const lab=document.createElement("label")
+                    Td_V.appendChild(lab)
+                    lab.innerText=document.getElementById("A1").value+": "
+                    const D1 = document.getElementById("D1");
+                    if(D1.value=="Name"){
                         const U_Name=document.createElement('input')
                         U_Name.type="text"
                         U_Name.placeholder="Enter Name"
-                        U_Name.value=document.getElementById("A1").value
+                       
                         Td_V.appendChild(U_Name)
-                        Td_V.appendChild(Stn)
+                     
                     }    
+                    else if(D1.value=="D/O/B"){
+                        const DOB=document.createElement("input");
+                        DOB.type="date";
+                        Td_V.appendChild(DOB)
+                      
+                    }
+                    else if(D1.value=="Gender"){
+                        const G1=document.createElement("input");
+                        G1.type="radio";
+                        G1.name="Gender"
+                        G1.value="Male"
+                        const G2=document.createElement("input");
+                        G2.type="radio";
+                        G2.name="Gender"
+                        G2.value="Female"
+                        const l1=document.createElement("label")
+                        l1.innerText="Male"
+                        const l2=document.createElement("label")
+                        l2.innerText="Female"
+                        Td_V.appendChild(G1)
+                        Td_V.appendChild(l1)
+                        Td_V.appendChild(G2)
+                        Td_V.appendChild(l2)
+                
+                    }
+                    const Stn=document.createElement("input")
+                    Stn.type="button";
+                    Stn.value="Save";
+                    Td_V.appendChild(Stn)
+                    Stn.addEventListener("click", () => {
+                    Tr2.hidden = true; 
+                    Td_V.innerHTML="";
+                    Add_field.value = "";
+                    Add_field.placeholder = "";
+        });
                 }
-    })
-
-    
-    Td_Add.appendChild(ADDBtn)
+                  
+  })
+  
+    Td_Add.appendChild(ADDBtn) 
   
 </script>
 
