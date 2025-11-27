@@ -6,33 +6,62 @@
     //Table and their rows and colums
     const Tab=document.createElement("table");
     Tab.border="1";
-    Tab.width="50%";
+    Tab.width="70%";
     Tab.cellSpacing="0";
     const Tr=document.createElement("tr");
     Tab.appendChild(Tr);
     const Tr1=document.createElement("tr");
     Tab.appendChild(Tr1);
+    const Tr2=document.createElement("tr")
+    Tab.appendChild(Tr2)
     const Td=document.createElement("td");
     Tr.appendChild(Td);
     const Td_Add=document.createElement("td");
     Tr1.appendChild(Td_Add);
+    const Td_V=document.createElement("td")
+    Tr2.appendChild(Td_V);
+    Tr2.hidden=true;
+    Tab.appendChild(Tr2)
     const B=document.getElementById("One");
     B.appendChild(Tab);
-    
+   
+
     //Input Fields
     const Lab_In=document.createElement("label");
     Lab_In.innerText="Input: ";
     Td.appendChild(Lab_In)
+
     const Add_field=document.createElement("input");
     Add_field.type="text";
     Td.appendChild(Add_field);
+    //Dropdown
+    const dd=document.createElement("select")
+    dd.style.margin="0 0 0 10"
+    const o1=document.createElement("option")
+    o1.value="UserName"
+    o1.innerHTML="Name"
+    const o2=document.createElement("option")
+    o2.value="D/O/B"
+    o2.innerHTML="D/O/B"
+    const o3=document.createElement("option")
+    o3.value="Gender"
+    o3.innerHTML="Gender"
+    dd.appendChild(o1)
+    dd.appendChild(o2)
+    dd.appendChild(o3)
+    Td.appendChild(dd)
     //Buttons
     const ADDBtn=document.createElement("input")
     ADDBtn.type="button";
     ADDBtn.value="ADD";
     ADDBtn.style.margin="0 0 0 42px";
-    Td_Add.appendChild(ADDBtn)
+    ADDBtn.addEventListener('click',()=>{
+                    Tr2.hidden=false;
+    })
 
+    
+    Td_Add.appendChild(ADDBtn)
+  
 </script>
 
 
