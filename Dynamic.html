@@ -16,20 +16,24 @@
     Tab.appendChild(Tr2)
     const Td=document.createElement("td");
     Tr.appendChild(Td);
+    const Tr3=document.createElement("tr")
+    Tab.appendChild(Tr3)
+    Tr3.hidden=true;
     const Td_Add=document.createElement("td");
     Tr1.appendChild(Td_Add);
-    const Td_V=document.createElement("td")
+    const Td_V=document.createElement("td");
     Tr2.appendChild(Td_V);
     Tr2.hidden=true;
-    
-    
-    Tab.appendChild(Tr2)
+   
+    const Td_p=document.createElement("td");
+    Tr3.appendChild(Td_p);
     const B=document.getElementById("One");
     B.appendChild(Tab);
-   
+    
 
     //Input Fields
     const Lab_In=document.createElement("label");
+    
     Lab_In.innerText="Input: ";
     Td.appendChild(Lab_In)
 
@@ -56,7 +60,10 @@
     dd.appendChild(o3)
     Td.appendChild(dd)
     //Part With Save option poping up
-    
+    //Paragraph
+    const pa=document.createElement("p");
+    Td_p.appendChild(pa);
+
 
     //Buttons
     const ADDBtn=document.createElement("input")
@@ -79,6 +86,7 @@
                     const D1 = document.getElementById("D1");
                     if(D1.value=="Name"){
                         const U_Name=document.createElement('input')
+                        U_Name.id="IF1"
                         U_Name.type="text"
                         U_Name.placeholder="Enter Name"
                        
@@ -87,19 +95,22 @@
                     }    
                     else if(D1.value=="D/O/B"){
                         const DOB=document.createElement("input");
+                        DOB.id="Da1"
                         DOB.type="date";
                         Td_V.appendChild(DOB)
                       
                     }
                     else if(D1.value=="Gender"){
-                        const G1=document.createElement("input");
+                        const G1=document.createElement("input"); 
                         G1.type="radio";
                         G1.name="Gender"
                         G1.value="Male"
+                        G1.id = "G_Male";
                         const G2=document.createElement("input");
                         G2.type="radio";
                         G2.name="Gender"
                         G2.value="Female"
+                        G2.id="G_Female"
                         const l1=document.createElement("label")
                         l1.innerText="Male"
                         const l2=document.createElement("label")
@@ -115,8 +126,24 @@
                     Stn.value="Save";
                     Td_V.appendChild(Stn)
                     Stn.addEventListener("click", () => {
+                    let title=document.getElementById('A1').value;
+                    let res=title+":";
+                    
+                    if(dd.value=="Name"){
+
+                        res+=document.getElementById('IF1').value;
+                    }
+                    else if(dd.value=="D/O/B"){
+                         res+=document.getElementById('Da1').value;
+                    }
+                    else if(dd.value=="Gender"){
+                        let g=document.querySelector('input[name="Gender"]:checked');
+                        res += g ? g.value : "";
+                    }
                     Tr2.hidden = true; 
                     Td_V.innerHTML="";
+                    Tr3.hidden=false;
+                    pa.innerHTML+=res+"<br>";
                     Add_field.value = "";
                     Add_field.placeholder = "";
         });
