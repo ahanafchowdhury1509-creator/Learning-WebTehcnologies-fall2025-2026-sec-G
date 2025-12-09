@@ -1,0 +1,82 @@
+body{
+    background-color: #ffffff;
+}
+header {
+    background-color: #F7F7F7;
+    height: 30px;
+    color: #003049;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid rgb(31, 19, 19);
+
+    
+  
+}
+nav{
+    margin-left: 1000px;
+}
+.links a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #003049;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.links a:hover{
+    color: #C1121F;
+}
+.Log{
+    position: fixed;
+    background-color:#F7F7F7;
+    height: 400px;
+    width: 500px;
+    left: 540px;
+    top: 170px;
+    border-radius: 100px;
+    box-shadow: 0px 8px 29px #780000;
+    
+}
+.Log h1{
+    margin-left: 200px;
+    color: #C1121F;
+}
+.Log input{
+    border-radius: 50px;
+    height: 40px;
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 100px;
+    border: 5px solid #780000;
+    
+}
+.Log input:focus{
+  border-color: #C1121F;
+}
+.Log  a{
+    position: relative;
+    left: 290px;
+    top:10px;
+    text-decoration: none;
+    color: #f0636d;
+}
+#LoginBut{
+    position: relative;
+    width: 90px;
+    left:-101px;
+    background-color: #C1121F;
+    border: 0px;
+    color: #ffffff;
+}
+#LoginBut:hover{
+    background-color: #780000;
+}
+.error-placeholder::placeholder {
+    color: rgb(194, 138, 138);
+    
+}
+input.error {
+    border: 2px solid red;
+}

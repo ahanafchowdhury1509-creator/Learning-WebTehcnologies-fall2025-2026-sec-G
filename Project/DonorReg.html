@@ -4,9 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="DonoorR.css">
+    <link rel="stylesheet" href="DonorR.css">
 </head>
 <body>
+<header >
+
+    <div><h5>Blood Donation</h5></div>
     
+    <nav class="links">
+        <a href="#">Home</a>
+        <a href="#">Doner</a>
+        <a href="#">Recipent</a>
+        <a href="#">Register</a>
+    </nav>
+    
+</header>
+<main>
+    <div class="Log">
+        <h1>Login</h1>
+        <input type="text" id="UserName" placeholder="Enter Your Name">
+        <br>
+        <input type="text" id="DonerID" placeholder="Input ID">
+        <br>
+        <input type="password" id="pass" placeholder="Enter Password">
+        <br>
+        <a href="#">Forgot Password</a>
+        <input type="button" value="Login" id="LoginBut">
+    </div>
+</main>
+<script>
+ document.getElementById("LoginBut").addEventListener('click',()=>{
+            const UN=document.getElementById("UserName");
+            const DN=document.getElementById("DonerID");
+            const PS=document.getElementById("pass");
+            const pa=/^\d\d\d$/;
+               // Check if any field is empty
+            if (UN.value === "" || DN.value === "" || PS.value === "") {
+                if (UN.value === "") {
+                    UN.placeholder = "Empty Field Must be Filled";
+                    UN.classList.add("error-placeholder");
+                }
+                if (DN.value === "") {
+                    DN.placeholder = "Empty Field Must be Filled";
+                    DN.classList.add("error-placeholder");
+                }
+                if (PS.value === "") {
+                    PS.placeholder = "Empty Field Must be Filled";
+                    PS.classList.add("error-placeholder");
+                }
+                return; 
+            }
+            else{
+                if(!pa.test(DN.value)){
+                   DN.value = "";
+                    DN.placeholder = "Invalid DonerID";  
+                    DN.classList.add("error");   
+                   
+                  
+                }
+                if(PS.value==="1!2!3!"){
+              
+                    alert("Login Succesful")
+                    UN.value="";
+                    DN.value="";
+                    PS.value="";
+                    
+                }
+                else{
+                    
+                
+                    alert("Wrong Password")
+                    UN.value="";
+                    DN.value="";
+                    PS.value="";
+                   
+                }
+              
+                     
+            }
+
+
+ })
+    
+
+</script>
 </body>
+
 </html>
