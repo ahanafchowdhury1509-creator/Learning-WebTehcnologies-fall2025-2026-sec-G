@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 </tr>
                 <tr>
                     <td>
-                        <h5 ><?php echo $error; ?></h5>
+                        <h5 style="color:red"><?php echo $error; ?></h5>
                     </td>
                 </tr>
                 <tr>
