@@ -77,3 +77,25 @@ header {
 .search-btn:hover {
     background-color: #c82333;
 }
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #dc3545;
+    margin-bottom: 15px;
+}
+
+.options-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.view-toggle button {
+    background: none;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
