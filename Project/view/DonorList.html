@@ -28,4 +28,46 @@
         <a href="#" style="text-decoration: none; margin-left: 5px;">&#9662;</a>
     </div>
     <div style="clear: both;"></div>
-</header>
+    </header>
+    <main class="container">
+        <section class="search-filters-section card">
+            <h2><i class="fas fa-filter"></i> Search & Filters (6.1 & 6.2)</h2>
+            <div class="filters-grid">
+                <div class="filter-item">
+                    <label for="bloodGroup">Blood Group</label>
+                    <select id="bloodGroup">
+                        <option value="">Any</option>
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="O+">O+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="A-">A-</option>
+                        <option value="B-">B-</option>
+                        <option value="O-">O-</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="location">Location (City/Area)</label>
+                    <input type="text" id="location" placeholder="e.g., Mirpur-2, Dhaka">
+                </div>
+                
+                <div class="filter-item">
+                    <label for="availability">Availability</label>
+                    <select id="availability">
+                        <option value="">Show All</option>
+                        <option value="ready">Ready to Donate (ON)</option>
+                        <option value="not_ready">Not Available (OFF)</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="lastDonation">Eligible Before Date</label>
+                    <input type="date" id="lastDonation">
+                </div>
+            </div>
+            <button class="search-btn"><i class="fas fa-search"></i> Find Donors</button>
+        </section>
+    </main>
+</body>
