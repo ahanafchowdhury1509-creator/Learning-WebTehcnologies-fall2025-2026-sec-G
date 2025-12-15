@@ -37,6 +37,23 @@ img{
 }
 .summary-badge { background-color: #f8d7da; color: #721c24; padding: 5px; border-radius: 4px; font-weight: bold; }
 .action-button { padding: 10px; margin: 5px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; display: inline-block; text-decoration: none; text-align: center; }
-.stat-card { background-color: #e9ecef; padding: 15px; border: 1px solid #ced4da; border-radius: 5px; text-align: center; }
+.stat-card { background-color: #e9ecef; 
+                padding: 15px; 
+                border: 1px solid #ced4da; 
+                border-radius: 5px; 
+                text-align: center; }
 .badge-locked { color: #adb5bd; }
 .badge-icon { font-size: 24px; margin: 5px; }
+.notification-item { border-bottom: 1px solid #f8f9fa; padding: 5px 0; font-size: 0.9em; }
+footer {
+    background-color: #e9ecef;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-link {
+    color: #495057;
+    margin: 0 10px;
+}
