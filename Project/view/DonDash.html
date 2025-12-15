@@ -58,27 +58,58 @@
     </tr>
 </table>
 <table id="ReqTab" width="100%" border="1" cellspacing="0">
-    <tr>
-        <th colspan="2" style="color: red;">Active Blood Requests</th>
-    </tr>
-    <tr><th>Request</th><th>Action</th></tr>
-    <tr>
-        <td>O- at PG Hospital</td>
-        <td><input type="button" value="Respond"></td>
-    </tr>
-    <tr>
-        <td>A+ at Central Clinic</td>
-        <td><input type="button" value="Respond"></td>
-    </tr>
-    <tr>
-        <td colspan="2" align="right"><a href="#">View All</a></td>
-    </tr>
+                            <tr>
+                            <td colspan="2" style="padding: 15px; background-color: #fff3cd; border: 1px solid #ffc371;">
+                                <h4>⚡ Quick Actions</h4>
+                                <a href="#" class="action-button"><i class="fas fa-hand-holding-medical"></i> Respond to Blood Requests</a>
+                                <a href="#" class="action-button" style="background-color: #17a2b8;"><i class="fas fa-calendar-alt"></i> Schedule Donation</a>
+                                <a href="#" class="action-button" style="background-color: #dc3545;"><i class="fas fa-bell"></i> View Emergency Requests</a>
+                                <a href="#" class="action-button" style="background-color: #6c757d;"><i class="fas fa-file-download"></i> Download Certificate</a>
+                            </td>
+                        </tr>
 </table>
 
 <table width="100%" border="1" cellspacing="0">
     <tr>
-    <td width="60%">
-        
+    <td width="60%" style="vertical-align: top;">
+     <table id="ReqTab" border="1px" cellspacing="0px" width="100%" style="margin-bottom: 20px; ">
+                                    <tr>
+                                        <th colspan="2" style="color: red; padding: 10px;"><i class="fas fa-search"></i> Active Blood Requests Near You (5 max)</th>
+                                    </tr>
+                                    <tr><th>Blood Group / Location</th><th>Action / Urgency</th></tr>
+                                    <tr>
+                                        <td align="center"> **O-** Required at PG Hospital (3km) | Required By: 12/03/2026</td>
+                                        <td><input type="button" value="Respond" style="background-color: #ffc107; color: black; font-weight: bold;"> (High Urgency)</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> **A+** Required at Central Clinic (1.5km) | Required By: 15/03/2026</td>
+                                        <td><input type="button" value="Respond"> (Medium Urgency)</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> **B-** Required at City General (5km) | Required By: 20/03/2026</td>
+                                        <td><input type="button" value="Respond"> (Low Urgency)</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align: right; padding: 5px;">
+                                            <a href="#">**View All Requests**</a>
+                                        </td>
+                                    </tr>
+    </table>   
+                                    <table border="1px" cellspacing="0px" width="100%">
+                                    <tr>
+                                        <th colspan="3" style="background-color: #007bff; color: white; padding: 10px;"><i class="fas fa-calendar-check"></i> Upcoming Appointments</th>
+                                    </tr>
+                                    <tr><th>Date & Time</th><th>Hospital / Location</th><th>Actions</th></tr>
+                                    <tr>
+                                        <td>15/04/2026, 10:00 AM</td>
+                                        <td>Dhaka Blood Center</td>
+                                        <td>
+                                            <input type="button" value="Reschedule" style="background-color: #ffc107;"> 
+                                            <input type="button" value="Cancel" style="background-color: #dc3545; color: white;">
+                                        </td>
+                                    </tr>
+                                    </table>
+
     </td>
     <td width="40%" align="center">
     <table width="100%">
