@@ -99,3 +99,20 @@ header {
     cursor: pointer;
     border-radius: 5px;
 }
+.view-toggle button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.sort-by select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.donor-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default List View */
+    gap: 20px;
+}
