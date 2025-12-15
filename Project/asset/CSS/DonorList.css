@@ -63,3 +63,17 @@ header {
     margin-bottom: 5px;
     color: #495057;
 }
+.search-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #c82333;
+}
