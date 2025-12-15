@@ -52,5 +52,31 @@
 
             </div>
         </section>
+        <section class="donor-table-section">
+            <div class="table-header">
+                <h2>All Registered Donors</h2>
+                <button class="action-btn secondary" id="bulkDeleteBtn" disabled>
+                    <i class="fas fa-trash-alt"></i> Bulk Deactivate
+                </button>
+            </div>
+            
+            <table id="donorTable">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll"></th>
+                        <th>Name</th>
+                        <th>Blood Group</th>
+                        <th>Location</th>
+                        <th>Verification Status</th>
+                        <th>Availability</th>
+                        <th>Last Donation Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="donorTableBody">
+                    <tr><td colspan="8" class="loading-message">Loading donor data...</td></tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 </body>
