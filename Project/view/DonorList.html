@@ -69,5 +69,33 @@
             </div>
             <button class="search-btn"><i class="fas fa-search"></i> Find Donors</button>
         </section>
+        <section class="results-section">
+            <div class="results-header">
+                <h3><i class="fas fa-users"></i> Available Donors Found (<span id="donorCount">0</span>)</h3>
+                
+                <div class="options-container">
+                    <div class="view-toggle">
+                        <button id="listView" class="active"><i class="fas fa-list"></i> List</button>
+                        <button id="mapView"><i class="fas fa-map"></i> Map</button>
+                    </div>
+                    <div class="sort-by">
+                        <label for="sortOrder">Sort By:</label>
+                        <select id="sortOrder">
+                            <option value="distance">Closest Distance</option>
+                            <option value="lastDonation">Last Donation (Newest)</option>
+                            <option value="name">Name (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="donorList" class="donor-list-container">
+                <p class="placeholder-text">Use the filters above and click 'Find Donors' to see results.</p>
+            </div>
+
+            <div class="pagination-container">
+                <button id="loadMore" class="search-btn" style="display: none;">Load More Donors</button>
+            </div>
+        </section>
     </main>
 </body>
