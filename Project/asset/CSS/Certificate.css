@@ -36,9 +36,24 @@ header {
 .top-nav a:hover {
     color: #dc3545;
 }
+
 .links{
     margin-left: 500px;
 }
 .links a{
     margin-left: 50px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    color: #dc3545;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
