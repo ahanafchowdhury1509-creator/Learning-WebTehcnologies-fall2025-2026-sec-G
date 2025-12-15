@@ -176,3 +176,7 @@ header {
     cursor: pointer;
     text-align: center;
 }
+.pagination-container {
+    text-align: center;
+    padding: 20px 0;
+}
