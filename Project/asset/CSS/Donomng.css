@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 header {
-    background-color: #343a40; /* Dark admin header */
+    background-color: #343a40; 
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -23,5 +23,35 @@ header {
 .top-nav a.active-page {
     color: white;
     background-color: #495057;
+    border-radius: 4px;
+}
+.filter-controls {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filter-grid {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end; 
+}
+
+.filter-item {
+    min-width: 200px;
+}
+
+.filter-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-item select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
     border-radius: 4px;
 }
