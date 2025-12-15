@@ -11,8 +11,8 @@ body {
     margin: 20px auto;
     padding: 0 20px;
 }
-.nav{
-    margin-left: 1000px;
+.links{
+    margin-left: 500px;
 }
 .links a{
     margin-left: 50px;
@@ -23,4 +23,21 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
+}
+
+h2 {
+    color: #dc3545;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+
+header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
