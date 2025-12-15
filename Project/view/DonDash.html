@@ -3,6 +3,7 @@
     <title>Donor Dashboard</title>
     <link rel="stylesheet" href="../asset/CSS/DonorBashBoard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
 </head>
 <body>
 <header>
@@ -35,7 +36,7 @@
             <table border="1px" width="100%" cellspacing="0">
                 <tr>
                     <td colspan="4" align="center">
-                        <h4>Donor Status Summary</h4>
+                        <h4> Donor Status Summary</h4>
                         <div style="display: flex; justify-content: space-around;">
                             <div>Blood Group: <span class="summary-badge">A+</span></div>
                             <div>Eligibility: <span class="summary-badge">Eligible</span></div>
@@ -56,7 +57,41 @@
         </td>
     </tr>
 </table>
+<table id="ReqTab" width="100%" border="1" cellspacing="0">
+    <tr>
+        <th colspan="2" style="color: red;">Active Blood Requests</th>
+    </tr>
+    <tr><th>Request</th><th>Action</th></tr>
+    <tr>
+        <td>O- at PG Hospital</td>
+        <td><input type="button" value="Respond"></td>
+    </tr>
+    <tr>
+        <td>A+ at Central Clinic</td>
+        <td><input type="button" value="Respond"></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right"><a href="#">View All</a></td>
+    </tr>
+</table>
 
+<table width="100%" border="1" cellspacing="0">
+    <tr><th colspan="2">Donation Statistics</th></tr>
+    <tr>
+        <td class="stat-card">5<br>Total Donations</td>
+        <td class="stat-card">2500ml<br>Volume</td>
+    </tr>
+    <tr>
+        <td class="stat-card">15<br>Lives Impacted</td>
+        <td class="stat-card">3<br>Streak</td>
+    </tr>
+</table>
+<footer style="text-align:center; padding:10px;">
+    <a href="#" class="footer-link">Help</a> |
+    <a href="#" class="footer-link">Privacy</a> |
+    <a href="#" class="footer-link">Terms</a> |
+    <a href="#" class="footer-link">Contact</a>
+</footer>
 
 
 </body>

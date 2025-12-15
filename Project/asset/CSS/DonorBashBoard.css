@@ -35,3 +35,8 @@ img{
     width: 100%;
     border-collapse: collapse;
 }
+.summary-badge { background-color: #f8d7da; color: #721c24; padding: 5px; border-radius: 4px; font-weight: bold; }
+.action-button { padding: 10px; margin: 5px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; display: inline-block; text-decoration: none; text-align: center; }
+.stat-card { background-color: #e9ecef; padding: 15px; border: 1px solid #ced4da; border-radius: 5px; text-align: center; }
+.badge-locked { color: #adb5bd; }
+.badge-icon { font-size: 24px; margin: 5px; }
