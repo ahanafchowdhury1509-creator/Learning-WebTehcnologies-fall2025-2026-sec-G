@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Certificate & Recognition</title>
+    <link rel="stylesheet" href="P4.css"> 
+   
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-hand-holding-heart"></i> Recognition Center
+        </div>
+        <nav class="top-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" class="active-page">Rewards & Certificate</a>
+            <a href="#">Profile</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>My Donor Recognition</h1>
+
+        <section class="card certificate-section">
+            <h2><i class="fas fa-certificate"></i> Download Donation Certificate</h2>
+            <p>Generate a PDF certificate for your latest donation.</p>
+            
+            <div id="latestDonationInfo">
+                <p><strong>Name:</strong> <span id="certName">Loading...</span></p>
+                <p><strong>Blood Group:</strong> <span id="certBloodGroup">Loading...</span></p>
+                <p><strong>Last Donation Date:</strong> <span id="certDonationDate">Loading...</span></p>
+            </div>
+            
+            <button id="generateCertificateBtn" class="action-btn primary">
+                <i class="fas fa-file-pdf"></i> Generate & Download PDF
+            </button>
+            <p class="note">Note: Certificates are available 48 hours after donation.</p>
+        </section>
+
+        <section class="card recognition-section">
+            <h2><i class="fas fa-trophy"></i> My Recognition Tiers</h2>
+            <p>You have made <strong id="donationCount">0</strong> donations.</p>
+
+            <div class="badge-container">
+                <div class="badge-item" data-tier="Bronze">
+                    <i class="fas fa-medal badge-icon bronze"></i>
+                    <p><strong>Bronze Tier</strong> (5 Donations)</p>
+                </div>
+                <div class="badge-item" data-tier="Silver">
+                    <i class="fas fa-medal badge-icon silver"></i>
+                    <p><strong>Silver Tier</strong> (15 Donations)</p>
+                </div>
+                <div class="badge-item" data-tier="Gold">
+                    <i class="fas fa-medal badge-icon gold locked"></i>
+                    <p><strong>Gold Tier</strong> (25 Donations)</p>
+                </div>
+            </div>
+            <p class="current-tier-message">Current Tier: <strong id="currentTier">Bronze</strong></p>
+        </section>
+
+        <section class="card leaderboard-section">
+            <h2><i class="fas fa-chart-bar"></i> Top Donor Leaderboard</h2>
+            <p>See the most impactful donors in our community!</p>
+
+            <table id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Total Donations</th>
+                        <th>Blood Group</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="donor_recognition.js"></script>
+
+</body>
+</html>
