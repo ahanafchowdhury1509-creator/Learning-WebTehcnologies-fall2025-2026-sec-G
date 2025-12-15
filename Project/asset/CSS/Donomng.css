@@ -1,0 +1,27 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+header {
+    background-color: #343a40; /* Dark admin header */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-nav a {
+    color: #adb5bd;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 5px 8px;
+}
+.top-nav a:hover,
+.top-nav a.active-page {
+    color: white;
+    background-color: #495057;
+    border-radius: 4px;
+}
