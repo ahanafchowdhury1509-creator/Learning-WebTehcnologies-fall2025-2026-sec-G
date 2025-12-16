@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Job Seeker Dashboard</h1>
+    </header>
+
+    <main class="dashboard-grid">
+        
+        <aside class="quick-links">
+            <h2>Quick Links</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" id="link-saved">Saved Jobs (3)</a></li>
+                    <li><a href="#" id="link-profile">Edit Profile</a></li>
+                    <li><a href="#" id="link-resume">Upload Resume</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="main-content">
+            
+            <div class="welcome-card">
+                <h2>Welcome back, **[Candidate Name]**!</h2>
+                <p>Profile Completion: <span id="profile-completion">75%</span></p>
+            </div>
+
+            <div class="applied-jobs-card">
+                <h3><span role="img" aria-label="Briefcase">💼</span> Your Applications (5 Total)</h3>
+                <ul id="applied-jobs-list">
+                    <li>Software Engineer Intern - **Applied** on 2025-11-20</li>
+                    <li>Frontend Developer - **Interview** on 2025-12-05</li>
+                </ul>
+            </div>
+
+            <div class="recommended-jobs-card">
+                <h3><span role="img" aria-label="Star">⭐</span> Recommended Jobs</h3>
+                <div id="recommended-jobs-feed">
+                    </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="job-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="job-title">Job Title Placeholder</h2>
+            <p><strong>Company:</strong> <span id="job-company">Company Placeholder</span></p>
+            <p><strong>Location:</strong> <span id="job-location">Location Placeholder</span></p>
+            
+            <hr>
+            
+            <h3>Job Description</h3>
+            <p id="job-description">Job description text will go here.</p>
+            
+            <button id="apply-button">Apply Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
