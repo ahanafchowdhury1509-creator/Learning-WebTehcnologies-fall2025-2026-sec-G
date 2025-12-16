@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Job Search</title>
+    <link rel="stylesheet" href="../Asset/CSS/LocBasedJob.css">
+</head>
+<body>
+
+    <header>
+        <h1>Find Jobs by Location</h1>
+    </header>
+
+    <main>
+        
+        <section class="card filter-section">
+            <h2>🔎 Filter Jobs</h2>
+            
+            <div class="filter-controls">
+                
+                <div class="filter-group">
+                    <label for="location-input">City, Country, or Zip:</label>
+                    <input type="text" id="location-input" placeholder="e.g., London, UK or 90210">
+                    <button id="detect-location-button">Auto-Detect Location</button>
+                </div>
+
+                <div class="filter-group">
+                    <label for="job-type-select">Job Type:</label>
+                    <select id="job-type-select">
+                        <option value="All">All Types</option>
+                        <option value="Onsite">On-site</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </div>
+                
+                <button id="apply-filters-button">Search Jobs</button>
+
+            </div>
+        </section>
+
+        <section class="card results-section">
+            <h2>Job Results (<span id="result-count">0</span> Found)</h2>
+            <div id="job-results-list">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="script_location.js"></script>
+</body>
+</html>
