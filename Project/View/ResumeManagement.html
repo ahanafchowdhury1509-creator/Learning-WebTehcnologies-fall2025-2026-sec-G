@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Management</title>
+    <link rel="stylesheet" href="style_resume.css">
+</head>
+<body>
+
+    <header>
+        <h1>Resume Management</h1>
+    </header>
+
+    <main>
+        
+        <section class="card resume-upload-section">
+            <h2>📤 Upload New Resume</h2>
+            <form id="upload-form">
+                <label for="resume-file">Select File (PDF, DOCX):</label>
+                <input type="file" id="resume-file" accept=".pdf,.doc,.docx" required>
+                
+                <label for="resume-name">Resume Nickname:</label>
+                <input type="text" id="resume-name" placeholder="e.g., 'Tech Resume 2025'" required>
+
+                <button type="submit" id="upload-button">Upload Resume</button>
+            </form>
+        </section>
+
+        <section class="card resume-list-section">
+            <h2>📄 Your Saved Resumes</h2>
+            <p id="resume-count-info">You have 0 resumes saved.</p>
+            <div id="resume-list-container">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="script_resume.js"></script>
+</body>
+</html>
