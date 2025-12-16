@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Requests & Monitoring</title>
+    <link rel="stylesheet" href="emergency_monitoring.css">
+    
+</head>
+<body>
+
+    <header class="emergency-header">
+        <div class="logo">
+            EMERGENCY CONTROL CENTER
+        </div>
+        <nav class="top-nav">
+            <a href="admin_dashboard.html">Admin Dashboard</a>
+            <a href="#" class="active-page">Emergency Monitor</a>
+            <a href="reports.html">Reports</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Live Emergency Response</h1>
+
+        <section class="quick-actions-metrics card">
+            
+            <div class="quick-action-area">
+                <h2>Emergency Quick Actions</h2>
+                <div class="action-grid">
+                    
+                    <form id="quickRequestForm" class="quick-request-form">
+                        <label for="reqBloodGroup">1. Blood Group:</label>
+                        <select id="reqBloodGroup" required>
+                            <option value="">Select Group</option>
+                            <option value="O-">O- (Universal)</option>
+                            <option value="A+">A+</option>
+                            <option value="B+">B+</option>
+                        </select>
+
+                        <label for="reqHospital">2. Location:</label>
+                        <input type="text" id="reqHospital" placeholder="Hospital Name" required>
+
+                        <button type="submit" class="action-btn emergency-btn">
+                            Create & ALERT
+                        </button>
+                    </form>
+
+                    <div class="broadcast-buttons">
+                        <h3>3. Instant Donor Broadcast</h3>
+                        <button id="broadcastSms" class="action-btn sms-btn">
+                            SMS Broadcast
+                        </button>
+                        <button id="broadcastEmail" class="action-btn email-btn">
+                            Email Broadcast
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kpi-area">
+                <h2>Performance Metrics</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-item">
+                        <span class="kpi-label">Average Response Time</span>
+                        <strong id="kpiResponseTime">N/A</strong>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-label">Coverage Rate (Active)</span>
+                        <strong id="kpiCoverageRate">0%</strong>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="monitoring-list card">
+            <h2>Live Emergency Requests (<span id="activeCount">0</span> Active)</h2>
+            <table id="emergencyTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Blood Group</th>
+                        <th>Hospital</th>
+                        <th>Time Elapsed</th>
+                        <th>Responses</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="emergencyTableBody">
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="emergency_monitoring.js"></script>
+
+</body>
+</html>
