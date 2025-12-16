@@ -138,3 +138,10 @@ function handleSaveSearch() {
     var location = document.getElementById('searchLocation').value || 'Anywhere';
     alert('Search for ' + group + ' near ' + location + ' saved successfully! The system will send notifications for new matches.');
 }
+function handleContactDonor(e) {
+    var button = e.target.closest('.contact-btn');
+    if (!button) return;
+    var donorId = button.getAttribute('data-id');
+    var donor = ALL_DONORS.find(function(d) { return d.id == donorId; });
+    alert('Initiating contact sequence for ' + donor.anonName + ' (' + donor.group + '). The system will send a notification to the donor.');
+}
