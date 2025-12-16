@@ -33,7 +33,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    align-items: flex-end;
+   align-items: flex-start;
 }
 
 .filter-group {
@@ -47,14 +47,21 @@ main {
     font-weight: bold;
 }
 
-#location-input, #job-type-select {
+#location-input{
     width: 100%;
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+#job-type-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 #detect-location-button {
     background-color: #6c757d; 
     color: white;
@@ -74,11 +81,11 @@ main {
     background-color: #28a745;
     color: white;
     border: none;
+    margin-top: 25px;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-   
     height: 40px; 
 }
 
