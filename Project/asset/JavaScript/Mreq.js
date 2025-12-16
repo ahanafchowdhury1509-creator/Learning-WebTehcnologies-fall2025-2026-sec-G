@@ -52,3 +52,7 @@ function handleEmergencyShortcut() {
 
     alert('EMERGENCY Mode Activated! Urgency level set to IMMEDIATE. Fill out the critical fields and submit as fast as possible.');
 }
+document.addEventListener('DOMContentLoaded', function() {
+    form.addEventListener('submit', handleFormSubmit);
+    emergencyBtn.addEventListener('click', handleEmergencyShortcut);
+});
