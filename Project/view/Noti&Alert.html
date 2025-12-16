@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications & System Alerts</title>
+    <link rel="stylesheet" href="../asset/CSS/Noti&Alert.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Alert Center
+        </div>
+        <nav class="top-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" class="active-page">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Notifications & System Alerts</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="notifications">
+                My Notifications (<span id="unreadCount">0</span>)
+            </button>
+            <button class="tab-btn" data-tab="system-alerts">
+                System Alerts
+            </button>
+            <button class="tab-btn" data-tab="settings">
+                Settings
+            </button>
+        </div>
+
+        <section id="notifications" class="tab-content active">
+            <div class="notification-actions">
+                <button id="markAllReadBtn" class="action-btn secondary">
+                    Mark All as Read
+                </button>
+                <button id="clearAllBtn" class="action-btn danger">
+                    Clear All
+                </button>
+            </div>
+            
+            <ul id="notificationList">
+                <li class="loading-message">Loading notifications...</li>
+            </ul>
+        </section>
+
+        <section id="system-alerts" class="tab-content">
+            <div id="systemAlertsContainer" class="system-alerts-container">
+            </div>
+            <div class="alert-history card">
+                <h3>Alert History Status</h3>
+                <p>System monitoring is currently <strong id="monitoringStatus" class="status-ok">ACTIVE</strong>.</p>
+                <p>Last Emergency Alert Triggered: <span id="lastEmergencyAlert">N/A</span></p>
+            </div>
+        </section>
+
+        <section id="settings" class="tab-content">
+            <div class="card">
+                <h2>Notification Settings</h2>
+                <div class="settings-group">
+                    <label>Email Notifications:</label>
+                    <input type="checkbox" id="emailToggle" checked> Enable
+                </div>
+                <div class="settings-group">
+                    <label>SMS Notifications:</label>
+                    <input type="checkbox" id="smsToggle"> Enable
+                </div>
+                <div class="settings-group">
