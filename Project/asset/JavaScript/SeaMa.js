@@ -29,3 +29,56 @@ function calculateMatchScore(donor, criteria) {
     }
     return Math.min(score, 100);
 }
+function createMatchRow(donor, ranking) {
+    var tr = document.createElement('tr');
+    tr.setAttribute('data-id', donor.id);
+
+    var tdRank = document.createElement('td');
+    tdRank.textContent = ranking;
+
+    var tdName = document.createElement('td');
+    tdName.textContent = donor.anonName;
+
+    var tdGroup = document.createElement('td');
+    var strong = document.createElement('strong');
+    strong.textContent = donor.group;
+    tdGroup.appendChild(strong);
+
+    var tdLocation = document.createElement('td');
+    tdLocation.textContent = donor.location;
+
+    var tdScore = document.createElement('td');
+    var scoreSpan = document.createElement('span');
+    if (donor.score >= 75) scoreSpan.className = 'score-high';
+    else if (donor.score >= 50) scoreSpan.className = 'score-medium';
+    else scoreSpan.className = 'score-low';
+    scoreSpan.textContent = donor.score + '%';
+    tdScore.appendChild(scoreSpan);
+
+    var tdLastDonation = document.createElement('td');
+    tdLastDonation.textContent = donor.lastDonation;
+
+    var tdVerified = document.createElement('td');
+    var verSpan = document.createElement('span');
+    verSpan.className = 'status-' + donor.verified;
+    verSpan.textContent = donor.verified;
+    tdVerified.appendChild(verSpan);
+
+    var tdAction = document.createElement('td');
+    var contactBtn = document.createElement('button');
+    contactBtn.className = 'action-btn primary contact-btn';
+    contactBtn.setAttribute('data-id', donor.id);
+    contactBtn.textContent = 'Contact';
+    tdAction.appendChild(contactBtn);
+
+    tr.appendChild(tdRank);
+    tr.appendChild(tdName);
+    tr.appendChild(tdGroup);
+    tr.appendChild(tdLocation);
+    tr.appendChild(tdScore);
+    tr.appendChild(tdLastDonation);
+    tr.appendChild(tdVerified);
+    tr.appendChild(tdAction);
+
+    return tr;
+}
