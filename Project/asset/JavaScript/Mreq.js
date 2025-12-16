@@ -39,3 +39,16 @@ function handleFormSubmit(e) {
         alert('Request successful! ' + data.bloodGroup + ' donors have been notified and auto-matching is complete.');
     }, 2000);
 }
+function handleEmergencyShortcut() {
+    urgencySelect.value = 'Emergency';
+    form.scrollIntoView({ behavior: 'smooth' });
+
+    var card = form.closest('.card');
+    if (card) {
+        card.style.borderColor = '#dc3545';
+        card.style.borderWidth = '2px';
+        card.style.transition = 'border 0.3s';
+    }
+
+    alert('EMERGENCY Mode Activated! Urgency level set to IMMEDIATE. Fill out the critical fields and submit as fast as possible.');
+}
