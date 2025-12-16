@@ -93,3 +93,22 @@ header {
     padding-top: 10px;
     color: #dc3545;
 }
+#leaderboardTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#leaderboardTable th, #leaderboardTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#leaderboardTable th {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+#leaderboardBody tr:nth-child(1) { font-weight: bold; background-color: #fffde7; } /* Highlight Rank 1 */
+#leaderboardBody tr:nth-child(2) { background-color: #fcf8e3; }
