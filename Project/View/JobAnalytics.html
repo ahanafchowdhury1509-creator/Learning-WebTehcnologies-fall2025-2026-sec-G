@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Analytics & Reports</title>
+    <link rel="stylesheet" href="../Asset/CSS/JobAnalytics.css">
+</head>
+<body>
+
+    <header>
+        <h1>Job Analytics Dashboard</h1>
+    </header>
+
+    <main>
+        
+        <section class="card summary-section">
+            <h2>📊 Overall Performance (Last 30 Days)</h2>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <h4>Total Job Views</h4>
+                    <p id="total-views">1,540</p>
+                </div>
+                <div class="metric-item">
+                    <h4>Total Applications</h4>
+                    <p id="total-apps">85</p>
+                </div>
+                <div class="metric-item">
+                    <h4>Conversion Rate</h4>
+                    <p id="conversion-rate">5.5%</p>
+                </div>
+                <div class="metric-item">
+                    <h4>Avg. Time to Hire (Days)</h4>
+                    <p id="avg-time-to-hire">28</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card chart-section">
+            <h2>📈 Application Trend Over Time</h2>
+            <div id="chart-placeholder">
+                <p>Data visualization placeholder: A simple bar chart showing applications per week.</p>
+                <div id="application-chart">
+                    </div>
+            </div>
+        </section>
+        
+        <section class="card job-analytics-section">
+            <h2>📋 Job-Specific Performance</h2>
+            <table id="job-analytics-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Views</th>
+                        <th>Applications</th>
+                        <th>Ratio (App/View)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <section class="card report-section">
+            <h2>📥 Download Reports</h2>
+            <div class="report-controls">
+                <button id="download-pdf-button">Download PDF Summary</button>
+                <button id="download-csv-button">Download Application Data (CSV)</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script_analytics.js"></script>
+</body>
+</html>
