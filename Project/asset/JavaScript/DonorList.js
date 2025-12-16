@@ -87,3 +87,29 @@ function sortDonors() {
 
     renderDonors(currentResults);
 }
+document.addEventListener('DOMContentLoaded', () => {
+    
+    currentResults = [...MOCK_DONORS];
+    renderDonors(currentResults);
+
+    
+    document.querySelector('.search-btn').addEventListener('click', filterDonors);
+
+   
+    document.getElementById('sortOrder').addEventListener('change', sortDonors);
+    
+    
+    donorList.addEventListener('click', (e) => {
+        if (e.target.classList.contains('contact-btn')) {
+            const donorId = e.target.getAttribute('data-id');
+            alert(`Contacting Donor ID ${donorId}... (Opens messaging/calling interface)`);
+        }
+    });
+    
+    
+    document.getElementById('listView').addEventListener('click', (e) => {
+        document.getElementById('mapView').classList.remove('active');
+        e.target.classList.add('active');
+        donorList.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    });
+});
