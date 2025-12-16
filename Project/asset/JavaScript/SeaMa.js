@@ -145,3 +145,8 @@ function handleContactDonor(e) {
     var donor = ALL_DONORS.find(function(d) { return d.id == donorId; });
     alert('Initiating contact sequence for ' + donor.anonName + ' (' + donor.group + '). The system will send a notification to the donor.');
 }
+document.addEventListener('DOMContentLoaded', function() {
+    searchForm.addEventListener('submit', handleSearch);
+    saveSearchBtn.addEventListener('click', handleSaveSearch);
+    matchTableBody.addEventListener('click', handleContactDonor);
+});
