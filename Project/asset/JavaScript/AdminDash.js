@@ -71,3 +71,15 @@ function renderDemandChart() {
     
     chartDemandDistribution.innerHTML = chartHtml;
 }
+function updateSimpleCharts() {
+    fulfillmentRateValue.textContent = `${MOCK_ANALYTICS.fulfillmentRate.toFixed(1)}%`;
+    responseTimeValue.textContent = MOCK_ANALYTICS.avgResponseTime;
+    ratioValue.textContent = `${MOCK_ANALYTICS.emergencyCount}:${MOCK_ANALYTICS.normalCount}`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateKPISummary();
+    updateOperationalStatus();
+    renderDemandChart();
+    updateSimpleCharts();
+});
