@@ -33,3 +33,22 @@ function updateKPISummary() {
     kpiEmergencyRequests.textContent = MOCK_METRICS.emergencyRequests;
     kpiScheduledEvents.textContent = MOCK_METRICS.scheduledEvents;
 }
+function updateOperationalStatus() {
+    statusPendingApprovals.textContent = MOCK_METRICS.pendingApprovals;
+    statusCriticalAlerts.textContent = MOCK_METRICS.criticalAlerts;
+
+    if (MOCK_METRICS.criticalAlerts > 1) {
+        statusCriticalAlerts.classList.add('status-warning');
+        statusCriticalAlerts.textContent += ' (ACTION NEEDED)';
+    }
+
+    if (MOCK_METRICS.pendingApprovals > 10) {
+        statusApiLatency.textContent = 'High';
+        statusApiLatency.classList.remove('status-warning');
+        statusApiLatency.classList.add('status-danger');
+    } else {
+        statusApiLatency.textContent = 'Normal';
+        statusApiLatency.classList.remove('status-danger');
+        statusApiLatency.classList.add('status-ok');
+    }
+}
