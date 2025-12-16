@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Blood Requests - Donor View</title>
+    <link rel="stylesheet" href="../asset/CSS/ReqFeed.css">
+    
+</head>
+<body>
+
+    <header>
+        <div><h5>Blood Donation</h5></div>
+        <nav class="top-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" class="active-page">Active Requests</a>
+            <a href="#">My Responses</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Available Blood Requests</h1>
+
+        <section class="card filter-section">
+            <div class="filter-grid">
+                
+                <div class="filter-item">
+                    <label for="filterBloodGroup">Blood Group:</label>
+                    <select id="filterBloodGroup">
+                        <option value="">All Groups</option>
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="O+">O+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="O-">O-</option>
+                        </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filterLocation">Location (Area/City):</label>
+                    <input type="text" id="filterLocation" placeholder="e.g., Mirpur, Dhaka">
+                </div>
+
+                <div class="filter-item">
+                    <label for="filterUrgency">Urgency:</label>
+                    <select id="filterUrgency">
+                        <option value="">All Urgency</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="High">High</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <button id="applyFilters" class="action-btn primary"><i class="fas fa-filter"></i> Apply Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="request-feed-section">
+            <h2><span id="requestCount">0</span> Active Requests Found</h2>
+            <div id="requestsContainer" class="requests-container">
+                <p class="placeholder-text">Use the filters above or wait for data to load.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Respond to Request <span id="modalReqId"></span></h3>
+            <p>You are responding to a request for <strong id="modalReqGroup"></strong> at <span id="modalHospital"></span>.</p>
+            <form id="responseForm">
+                <div class="form-group">
+                    <label>Your Intent:</label>
+                    <input type="radio" id="intentConfirm" name="intent" value="Confirm" required>
+                    <label for="intentConfirm">Confirm Donation (Ready to go)</label><br>
+                    <input type="radio" id="intentMessage" name="intent" value="Message">
+                    <label for="intentMessage">Send Message (Need more info)</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="donorMessage">Your Message (Optional)</label>
+                    <textarea id="donorMessage" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="action-btn primary"><i class="fas fa-paper-plane"></i> Submit Response</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="donor_requests_feed.js"></script>
+
+</body>
+</html>
