@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Search & Matching</title>
+    <link rel="stylesheet" href="donor_search_matching.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-handshake"></i> Search & Match
+        </div>
+        <nav class="top-nav">
+            <a href="blood_request_form.html">New Request</a>
+            <a href="#" class="active-page">Find Donors</a>
+            <a href="my_requests.html">My Requests</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Intelligent Donor Matching</h1>
+
+        <section class="search-filters card">
+            <h2><i class="fas fa-search"></i> Donor Search Criteria</h2>
+            
+            <form id="searchForm">
+                <div class="filter-grid">
+                    
+                    <div class="form-group">
+                        <label for="searchBloodGroup">Required Blood Group</label>
+                        <select id="searchBloodGroup" required>
+                            <option value="">-- Select --</option>
+                            <option value="O+">O+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="O-">O-</option>
+                            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="searchLocation">Location (City/Area)</label>
+                        <input type="text" id="searchLocation" placeholder="e.g., Mirpur, Dhaka">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filterAvailability">Availability</label>
+                        <select id="filterAvailability">
+                            <option value="">Any</option>
+                            <option value="Available">Available Now</option>
+                            <option value="Unvailable">Unavailable</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filterLastDonation">Last Donation Date (Max)</label>
+                        <input type="date" id="filterLastDonation">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filterVerification">Verification Status</label>
+                        <select id="filterVerification">
+                            <option value="Verified">Verified Only</option>
+                            <option value="">Any Status</option>
+                            <option value="Pending">Pending Only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="action-btn primary"><i class="fas fa-binoculars"></i> Find Matching Donors</button>
+                    <button type="button" id="saveSearchBtn" class="action-btn secondary"><i class="fas fa-save"></i> Save Search</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2><span id="matchCount">0</span> Donors Matched</h2>
+            
+            <div class="view-toggle">
+                <button id="listViewBtn" class="action-btn active"><i class="fas fa-list"></i> List View</button>
+                <button id="mapViewBtn" class="action-btn tertiary" disabled><i class="fas fa-map"></i> Map View (Not Implemented)</button>
+            </div>
+
+            <table id="donorMatchTable">
+                <thead>
+                    <tr>
+                        <th>Ranking</th>
+                        <th>Name (Anon)</th>
+                        <th>Blood Group</th>
+                        <th>Location</th>
+                        <th>Match Score</th>
+                        <th>Last Donation</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="matchTableBody">
+                    <tr><td colspan="8" class="loading-message">Use the filters above and click 'Find Matching Donors'.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="donor_search_matching.js"></script>
+
+</body>
+</html>
