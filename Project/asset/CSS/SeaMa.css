@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+h1 {
+    color: #495057;
+    border-bottom: 2px solid #ced4da;
+    padding-bottom: 10px;
+}
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745;
+}
+.top-nav a {
+    color: #adb5bd;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 5px 8px;
+}
+.top-nav a:hover,
+.top-nav a.active-page {
+    color: white;
+    background-color: #495057;
+    border-radius: 4px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-actions {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.action-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.action-btn.primary { background-color: #28a745; color: white; }
+.action-btn.primary:hover { background-color: #1e7e34; }
+.action-btn.secondary { background-color: #007bff; color: white; }
+.action-btn.secondary:hover { background-color: #0056b3; }
+.action-btn.tertiary { background-color: #6c757d; color: white; }
+.action-btn.tertiary:disabled { opacity: 0.5; cursor: not-allowed; }
+.view-toggle {
+    margin-bottom: 15px;
+}
+
+#donorMatchTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#donorMatchTable th, #donorMatchTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#donorMatchTable th {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.score-high { color: #28a745; font-weight: bold; }
+.score-medium { color: #ffc107; font-weight: bold; }
+.score-low { color: #dc3545; }
+.status-Verified { color: #28a745; }
+.status-Available { background-color: #d4edda; padding: 3px 6px; border-radius: 3px; }
