@@ -95,3 +95,14 @@ function handleResolve(e) {
         alert(`Request ${id} status updated to FULFILLED.`);
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    updateKPIs();
+    renderRequests();
+
+    quickRequestForm.addEventListener('submit', handleQuickRequest);
+    broadcastSmsBtn.addEventListener('click', () => handleBroadcast('SMS'));
+    broadcastEmailBtn.addEventListener('click', () => handleBroadcast('Email'));
+    emergencyTableBody.addEventListener('click', handleResolve);
+
+    setInterval(renderRequests, 10000);
+});
