@@ -44,3 +44,22 @@ function generateReport(format) {
 
     }, 1500);
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date();
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(today.getDate() - 30);
+
+    var formatDate = function(date) {
+        return date.toISOString().split('T')[0];
+    };
+
+    endDateInput.value = formatDate(today);
+    startDateInput.value = formatDate(thirtyDaysAgo);
+
+    document.querySelectorAll('.export-btn').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            var format = e.currentTarget.getAttribute('data-format');
+            generateReport(format);
+        });
+    });
+});
