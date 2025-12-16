@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Exports</title>
+    <link rel="stylesheet" href="reports_exports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Reporting Center
+        </div>
+        <nav class="top-nav">
+            <a href="admin_dashboard_analytics.html">Dashboard</a>
+            <a href="#" class="active-page">Reports</a>
+            <a href="settings.html">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>System Reports & Data Export</h1>
+
+        <section class="report-area card">
+            <h2>Report Configuration</h2>
+            
+            <form id="reportGenerationForm">
+                
+                <div class="form-group">
+                    <label for="reportType">Select Report Type</label>
+                    <select id="reportType" required>
+                        <option value="">-- Select Report --</option>
+                        <option value="donor_matching">Donor Matching Report</option>
+                        <option value="attendance">Appointment & Camp Attendance Report</option>
+                        <option value="notifications">Notification Delivery Report</option>
+                    </select>
+                </div>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reportFilter">Specific Filter (e.g., Blood Group, Location)</label>
+                    <input type="text" id="reportFilter" placeholder="Optional: Type O+, Dhaka, etc.">
+                </div>
+                
+                <div class="export-options">
+                    <h3>Export Format</h3>
+                    <div class="export-buttons">
+                        <button type="button" class="action-btn export-btn pdf-btn" data-format="pdf">
+                            Generate PDF
+                        </button>
+                        <button type="button" class="action-btn export-btn excel-btn" data-format="excel">
+                            Generate Excel
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+        <section class="status-history">
+            <h2>Report Generation Status</h2>
+            <div id="reportStatus" class="card">
+                <p>Status: <span id="currentStatus" class="status-info">Ready to generate.</span></p>
+                <p>Last Export: <span id="lastExport">None</span></p>
+            </div>
+            
+            <div class="history-log card">
+                <h3>Recent Report Log</h3>
+                <ul id="logList">
+                    <li>[2025-12-15 11:30] Donor Matching Report (PDF) generated.</li>
+                    <li>[2025-12-14 14:45] Attendance Report (Excel) generated.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    
+
+</body>
+</html>
