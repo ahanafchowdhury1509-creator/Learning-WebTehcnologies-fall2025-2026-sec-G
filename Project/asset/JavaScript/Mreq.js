@@ -1,7 +1,26 @@
-const form = document.getElementById('bloodRequestForm');
-const emergencyBtn = document.getElementById('emergencyShortcut');
-const urgencySelect = document.getElementById('urgency');
-const confirmationMessage = document.getElementById('confirmationMessage');
+var ALL_REQUESTS = [
+    { 
+        id: 101, patient: "M. Hossain", group: "O-", units: 3, hospital: "City General", date: "2025-12-20", 
+        urgency: "Emergency", status: "Active", responses: [
+            { donor: "A. Smith", status: "Confirmed" }, 
+            { donor: "B. Jones", status: "Pending" }
+        ] 
+    },
+    { 
+        id: 102, patient: "F. Ahmed", group: "A+", units: 2, hospital: "Dhaka Central", date: "2026-01-15", 
+        urgency: "Normal", status: "Active", responses: [] 
+    },
+    { 
+        id: 103, patient: "Z. Khan", group: "B+", units: 1, hospital: "Red Crescent", date: "2025-11-05", 
+        urgency: "High", status: "Fulfilled", responses: [
+            { donor: "C. David", status: "Confirmed" }
+        ] 
+    },
+    { 
+        id: 104, patient: "L. Moni", group: "AB+", units: 4, hospital: "Green Life", date: "2025-12-10", 
+        urgency: "Normal", status: "Cancelled", responses: [] 
+    }
+];
 
 function handleFormSubmit(e) {
     e.preventDefault();
