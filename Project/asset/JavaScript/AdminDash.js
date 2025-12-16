@@ -27,3 +27,9 @@ const chartDemandDistribution = document.getElementById('chartDemandDistribution
 const fulfillmentRateValue = document.getElementById('fulfillmentRateValue');
 const responseTimeValue = document.getElementById('responseTimeValue');
 const ratioValue = document.getElementById('ratioValue');
+function updateKPISummary() {
+    kpiTotalDonors.textContent = MOCK_METRICS.totalDonors;
+    kpiActiveRequests.textContent = MOCK_METRICS.activeRequests;
+    kpiEmergencyRequests.textContent = MOCK_METRICS.emergencyRequests;
+    kpiScheduledEvents.textContent = MOCK_METRICS.scheduledEvents;
+}
