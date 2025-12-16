@@ -1,7 +1,7 @@
 var recommendedJobs=[
     {id:1,title:"Senior Full Stack Engineer",company:"Tech Innovators Inc.",location:"Remote (PST)",description:"Develop and maintain web applications using React and Node.js. 5+ years of experience required. Strong knowledge of cloud infrastructure is a plus."},
-    {id:2,title:"UX/UI Designer",company:"Creative Solutions Co.",location:"New York, NY",description:"Design user-friendly interfaces and conduct user research. Must be proficient in Figma or Sketch. Portfolio required for consideration."},
-    {id:3,title:"Data Analyst",company:"Global Finance Group",location:"Chicago, IL",description:"Analyze large datasets to provide business insights. Experience with SQL and Python/R is essential. Focus on market trends and risk assessment."}];
+    {id:2,title:"UX/UI Designer",company:"Creative Solutions Co.",location:"Dhaka",description:"Design user-friendly interfaces and conduct user research. Must be proficient in Figma or Sketch. Portfolio required for consideration."},
+    {id:3,title:"Data Analyst",company:"Global Finance Group",location:"Chittagong",description:"Analyze large datasets to provide business insights. Experience with SQL and Python/R is essential. Focus on market trends and risk assessment."}];
 
 var jobFeedContainer=document.getElementById("recommended-jobs-feed");
 var modal=document.getElementById("job-detail-modal");

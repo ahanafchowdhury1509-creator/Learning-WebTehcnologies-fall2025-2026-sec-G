@@ -1,15 +1,15 @@
 var jobPostings=[
 {id:101,title:"Backend Engineer (Go/AWS)",applicants:[
-{id:1,name:"Alice Johnson",status:"New"},
-{id:2,name:"Bob Smith",status:"Shortlisted"},
-{id:3,name:"Charlie Brown",status:"Rejected"},
-{id:4,name:"David Lee",status:"New"}
+{id:1,name:"Mostofa Zakaria",status:"New"},
+{id:2,name:"Aslam AHmed",status:"Shortlisted"},
+{id:3,name:"Sajek Mollah",status:"Rejected"},
+{id:4,name:"Sadik Kaiyum",status:"New"}
 ],status:"Active"},
 {id:102,title:"Data Scientist (Python/ML)",applicants:[
-{id:5,name:"Eva Green",status:"New"},
-{id:6,name:"Frank White",status:"Shortlisted"}
+{id:5,name:"Ahanaf Chowdhury",status:"New"},
+{id:6,name:"Akkas ALi",status:"Shortlisted"}
 ],status:"Active"},
-{id:103,title:"Marketing Manager",applicants:[],status:"Closed"}
+{id:103,title:"Nur nobi",applicants:[],status:"Closed"}
 ];
 
 var dashboardView=document.getElementById("dashboard-view");
