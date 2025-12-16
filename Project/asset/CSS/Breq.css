@@ -19,8 +19,8 @@ h1 {
 }
 
 header {
-    background-color: #343a40;
-    color: white;
+    background-color: #f5faff;
+    color: rgb(4, 11, 104);
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ header {
 }
 
 .top-nav a {
-    color: #adb5bd;
+    color: #304a64;
     margin-left: 15px;
     text-decoration: none;
     padding: 5px 8px;
