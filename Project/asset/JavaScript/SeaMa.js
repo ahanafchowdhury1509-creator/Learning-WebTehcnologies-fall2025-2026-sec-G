@@ -129,3 +129,12 @@ function handleSearch(e) {
         matchTableBody.appendChild(createMatchRow(donor, index + 1));
     });
 }
+function handleSaveSearch() {
+    var group = document.getElementById('searchBloodGroup').value;
+    if (!group) {
+        alert('Select a Blood Group before saving the search.');
+        return;
+    }
+    var location = document.getElementById('searchLocation').value || 'Anywhere';
+    alert('Search for ' + group + ' near ' + location + ' saved successfully! The system will send notifications for new matches.');
+}
