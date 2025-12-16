@@ -52,3 +52,22 @@ function updateOperationalStatus() {
         statusApiLatency.classList.add('status-ok');
     }
 }
+function renderDemandChart() {
+    const data = MOCK_ANALYTICS.demandDistribution;
+    const values = Object.values(data);
+    const maxCount = Math.max(...values);
+    let chartHtml = '';
+
+    for (const group in data) {
+        const count = data[group];
+        const percentage = (count / maxCount) * 100;
+        chartHtml += `
+            <div class="chart-bar">
+                <span>${group} (${count})</span>
+                <div class="bar" style="width: ${percentage.toFixed(0)}%;"></div>
+            </div>
+        `;
+    }
+    
+    chartDemandDistribution.innerHTML = chartHtml;
+}
