@@ -14,3 +14,16 @@ const MOCK_ANALYTICS = {
     emergencyCount: 3,
     normalCount: 42
 };
+const kpiTotalDonors = document.getElementById('kpiTotalDonors');
+const kpiActiveRequests = document.getElementById('kpiActiveRequests');
+const kpiEmergencyRequests = document.getElementById('kpiEmergencyRequests');
+const kpiScheduledEvents = document.getElementById('kpiScheduledEvents');
+
+const statusPendingApprovals = document.getElementById('statusPendingApprovals');
+const statusCriticalAlerts = document.getElementById('statusCriticalAlerts');
+const statusApiLatency = document.getElementById('statusApiLatency');
+
+const chartDemandDistribution = document.getElementById('chartDemandDistribution');
+const fulfillmentRateValue = document.getElementById('fulfillmentRateValue');
+const responseTimeValue = document.getElementById('responseTimeValue');
+const ratioValue = document.getElementById('ratioValue');
