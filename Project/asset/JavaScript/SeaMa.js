@@ -82,3 +82,50 @@ function createMatchRow(donor, ranking) {
 
     return tr;
 }
+function handleSearch(e) {
+    e.preventDefault();
+    var criteria = {
+        bloodGroup: document.getElementById('searchBloodGroup').value,
+        location: document.getElementById('searchLocation').value,
+        availability: document.getElementById('filterAvailability').value,
+        lastDonation: document.getElementById('filterLastDonation').value,
+        verification: document.getElementById('filterVerification').value
+    };
+    if (!criteria.bloodGroup) {
+        alert('Please select the required Blood Group to perform a match.');
+        return;
+    }
+
+    var matchedDonors = ALL_DONORS.map(function(donor) {
+        var copy = Object.assign({}, donor);
+        copy.score = calculateMatchScore(donor, criteria);
+        return copy;
+    });
+
+    matchedDonors = matchedDonors.filter(function(donor) {
+        return donor.score > 0 && (criteria.verification === '' || donor.verified === criteria.verification);
+    });
+
+    matchedDonors.sort(function(a, b) {
+        if (b.score !== a.score) return b.score - a.score;
+        return new Date(b.lastDonation) - new Date(a.lastDonation);
+    });
+
+    matchCountSpan.textContent = matchedDonors.length;
+
+    matchTableBody.innerHTML = '';
+    if (matchedDonors.length === 0) {
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        td.colSpan = 8;
+        td.style.textAlign = 'center';
+        td.textContent = 'No high-priority matches found for the criteria.';
+        tr.appendChild(td);
+        matchTableBody.appendChild(tr);
+        return;
+    }
+
+    matchedDonors.forEach(function(donor, index) {
+        matchTableBody.appendChild(createMatchRow(donor, index + 1));
+    });
+}
