@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard</title>
+    <link rel="stylesheet" href="style_employer.css">
+</head>
+<body>
+
+    <header>
+        <h1>Employer Dashboard</h1>
+    </header>
+
+    <main>
+        
+        <section id="dashboard-view" class="view">
+            <h2>Welcome, [Hiring Manager Name]</h2>
+            
+            <div class="quick-links-employer">
+                <button id="create-job-button">Create New Job Posting</button>
+            </div>
+
+            <div class="card posted-jobs-summary">
+                <h3>📋 Your Active Postings (3 Total)</h3>
+                <table id="posted-jobs-table">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Applicants</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="card recent-activity">
+                <h3>Recent Activity</h3>
+                <ul id="activity-list">
+                    <li>**2025-12-16:** 5 new applicants for 'Backend Engineer'.</li>
+                    <li>**2025-12-15:** John D. shortlisted for 'Data Scientist'.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="applicants-view" class="view hidden">
+            <button id="back-to-dashboard-button" class="back-button">← Back to Dashboard</button>
+            
+            <h2 id="job-detail-title">Job Title Placeholder</h2>
+            <p><strong>Total Applicants:</strong> <span id="applicant-count">0</span></p>
+            
+            <div class="card applicants-list-card">
+                <h3>Applicants</h3>
+                <ul id="applicants-list">
+                    </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script_employer.js"></script>
+</body>
+</html>
