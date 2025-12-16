@@ -146,3 +146,54 @@ function showProcessModal(id) {
     actionReason.value = '';
     actionModal.style.display = 'block';
 }
+function handleProcessAction(action) {
+    const reason = actionReason.value.trim();
+    if (!reason) {
+        alert('Reason is required.');
+        return;
+    }
+
+    currentRequestToProcess.status = action === 'Approve' ? 'Approved' : 'Rejected';
+
+    if (action === 'Approve') {
+        currentRequestToProcess.responseTime = Math.floor(Math.random() * 20) + 1;
+    }
+
+    alert('Request ' + currentRequestToProcess.id + ' ' + action + 'D.');
+
+    actionModal.style.display = 'none';
+    currentRequestToProcess = null;
+
+    renderPendingRequests();
+    calculateKPIs();
+    renderBloodGroupChart();
+}
+document.addEventListener('DOMContentLoaded', function () {
+    renderPendingRequests();
+    calculateKPIs();
+    renderBloodGroupChart();
+
+    pendingTableBody.addEventListener('click', function (e) {
+        if (e.target.classList.contains('process-btn')) {
+            showProcessModal(parseInt(e.target.getAttribute('data-id')));
+        }
+    });
+
+    modalApproveBtn.addEventListener('click', function () {
+        handleProcessAction('Approve');
+    });
+
+    modalRejectBtn.addEventListener('click', function () {
+        handleProcessAction('Reject');
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', function () {
+        actionModal.style.display = 'none';
+    });
+
+    window.onclick = function (e) {
+        if (e.target === actionModal) {
+            actionModal.style.display = 'none';
+        }
+    };
+});
