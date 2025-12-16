@@ -48,23 +48,42 @@ function filterDonors() {
     const eligibleDate = document.getElementById('lastDonation').value;
 
     let filtered = MOCK_DONORS.filter(donor => {
-        // Filter 1: Blood Group
+     
         if (bloodGroup && donor.bloodGroup !== bloodGroup) return false;
 
-        // Filter 2: Location
+
         if (location && !donor.location.toLowerCase().includes(location)) return false;
 
-        // Filter 3: Availability
+  
         if (availability === 'ready' && !donor.available) return false;
         if (availability === 'not_ready' && donor.available) return false;
 
-        // Filter 4: Last Donation Date (Eligible Before Date)
         if (eligibleDate) {
             const dateInput = new Date(eligibleDate);
             const donationDate = new Date(donor.lastDonation);
-            // Check if the donor's last donation date is BEFORE the eligible date input
+
             if (donationDate >= dateInput) return false;
         }
 
         return true;
-    });}
+    });
+    currentResults = filtered;
+    sortDonors();
+}
+function sortDonors() {
+    const sortOrder = document.getElementById('sortOrder').value;
+
+    currentResults.sort((a, b) => {
+        if (sortOrder === 'distance') {
+            return a.distance - b.distance;
+        } else if (sortOrder === 'lastDonation') {
+           
+            return new Date(b.lastDonation) - new Date(a.lastDonation);
+        } else if (sortOrder === 'name') {
+            return a.name.localeCompare(b.name);
+        }
+        return 0;
+    });
+
+    renderDonors(currentResults);
+}
