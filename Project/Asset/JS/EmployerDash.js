@@ -1,4 +1,4 @@
-var jobPostings=[
+let jobPostings=[
 {id:101,title:"Backend Engineer (Go/AWS)",applicants:[
 {id:1,name:"Mostofa Zakaria",status:"New"},
 {id:2,name:"Aslam AHmed",status:"Shortlisted"},
@@ -12,13 +12,13 @@ var jobPostings=[
 {id:103,title:"Nur nobi",applicants:[],status:"Closed"}
 ];
 
-var dashboardView=document.getElementById("dashboard-view");
-var applicantsView=document.getElementById("applicants-view");
-var jobTableBody=document.querySelector("#posted-jobs-table tbody");
-var backButton=document.getElementById("back-to-dashboard-button");
-var jobDetailTitle=document.getElementById("job-detail-title");
-var applicantCountEl=document.getElementById("applicant-count");
-var applicantsListEl=document.getElementById("applicants-list");
+let dashboardView=document.getElementById("dashboard-view");
+let applicantsView=document.getElementById("applicants-view");
+let jobTableBody=document.querySelector("#posted-jobs-table tbody");
+let backButton=document.getElementById("back-to-dashboard-button");
+let jobDetailTitle=document.getElementById("job-detail-title");
+let applicantCountEl=document.getElementById("applicant-count");
+let applicantsListEl=document.getElementById("applicants-list");
 
 function showDashboard(){
 dashboardView.classList.remove("hidden");
@@ -26,7 +26,7 @@ applicantsView.classList.add("hidden");
 }
 
 function showJobDetailsView(jobId){
-var job=findJobById(jobId);
+let job=findJobById(jobId);
 if(job){
 jobDetailTitle.textContent=job.title;
 applicantCountEl.textContent=job.applicants.length;
@@ -39,26 +39,26 @@ alert("Job not found.");
 }
 
 function findJobById(id){
-for(var i=0;i<jobPostings.length;i++){
+for(let i=0;i<jobPostings.length;i++){
 if(jobPostings[i].id===id)return jobPostings[i];
 }
 return null;
 }
 
 function createJobRow(job){
-var row=document.createElement("tr");
+let row=document.createElement("tr");
 
-var titleCell=document.createElement("td");
+let titleCell=document.createElement("td");
 titleCell.textContent=job.title;
 
-var applicantsCell=document.createElement("td");
+let applicantsCell=document.createElement("td");
 applicantsCell.textContent=job.applicants.length;
 
-var statusCell=document.createElement("td");
+let statusCell=document.createElement("td");
 statusCell.textContent=job.status;
 
-var actionCell=document.createElement("td");
-var viewButton=document.createElement("button");
+let actionCell=document.createElement("td");
+let viewButton=document.createElement("button");
 viewButton.className="view-applicants-button";
 viewButton.textContent="View Applicants";
 viewButton.setAttribute("data-job-id",job.id);
@@ -76,35 +76,35 @@ jobTableBody.appendChild(row);
 
 function populatePostedJobsSummary(){
 jobTableBody.innerHTML="";
-for(var i=0;i<jobPostings.length;i++){
+for(let i=0;i<jobPostings.length;i++){
 createJobRow(jobPostings[i]);
 }
 }
 
 function populateApplicantsList(applicants){
 applicantsListEl.innerHTML="";
-for(var i=0;i<applicants.length;i++){
-var a=applicants[i];
-var item=document.createElement("li");
+for(let i=0;i<applicants.length;i++){
+let a=applicants[i];
+let item=document.createElement("li");
 item.className="applicant-item";
 
-var info=document.createElement("div");
+let info=document.createElement("div");
 info.className="applicant-info";
 
-var name=document.createElement("h4");
+let name=document.createElement("h4");
 name.textContent=a.name;
 
-var status=document.createElement("p");
+let status=document.createElement("p");
 status.textContent="Status: "+a.status;
 
 info.appendChild(name);
 info.appendChild(status);
 
-var actions=document.createElement("div");
+let actions=document.createElement("div");
 actions.className="applicant-actions";
 
 ["view","shortlist","reject"].forEach(function(type){
-var btn=document.createElement("button");
+let btn=document.createElement("button");
 btn.className="action-"+type;
 btn.textContent=type.charAt(0).toUpperCase()+type.slice(1);
 btn.setAttribute("onclick",'handleAction("'+type+'","'+a.name+'")');
